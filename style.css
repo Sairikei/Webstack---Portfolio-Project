@@ -67,7 +67,7 @@ body{
 }
 
 .toggle{
-    width: 32px;
+    width: 42px;
     height: 20px;
     background-color: white;
     border-radius: 30px;
@@ -89,6 +89,7 @@ body{
     right: 1px;
     border-radius: 50%;
     cursor: pointer;
+    transition: 1s ease all;
 }
 
 .sidebar{
@@ -152,12 +153,15 @@ body{
 .movie-list-wrapper{
     position: relative;
     overflow: hidden;
+
 }
 
 .movie-list{
     display: flex;
     align-items: center;
     height: 400px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
 }
 
 .movie-list-item{
@@ -182,6 +186,7 @@ body{
     width: 300px;
     height: 270px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .movie-list-item-title{
@@ -232,4 +237,33 @@ body{
     color: lightgrey;
     opacity: 0.5;
     cursor: pointer;
+}
+
+.container.active{
+    background-color: white;
+}
+
+.menu-list-title.active {
+    color: black;
+}
+.navbar-container.active {
+    background-color: white;
+    color: black;
+}
+
+.sidebar.active {
+    background-color: white;
+}
+
+.left-menu-icon.active {
+    color: black;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggle-ball.active {
+    background-color: wheat;
+    transform: translateX(-20px);
 }
