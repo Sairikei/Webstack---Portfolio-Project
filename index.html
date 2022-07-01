@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,400;1,900&family=Ubuntu:ital,wght@0,300;0,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <title>ManiaMax Movies</title>
 </head>
 <body>
     <div class="navbar">
         <div class="navbar-container">
             <div class="logo-container">
-                <h1 class="logo">dimitiri</h1>
+                <h1 class="logo">ManiaMax Movies</h1>
             </div>
             <div class="menu-container">
                 <ul class="menu-list">
@@ -53,6 +54,7 @@
             style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg')">
             <h1 class="featured-title">Featured</h1>
                 <img class="featured-title" src="img/odyssey.jpg" alt="">
+                <span class="featured-desc">Writeer's odyssey</span>
                 <p class="featured-desc">Writer's odyssey</p>
                 </p>
                 <button class="featured-button">WATCH NOW</button>
@@ -134,13 +136,30 @@
                 <i class="fa-solid fa-angles-right arrow"></i>
             </div>
         </div>
-        <div class="content-container">
-            <div class="featured"
-            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/Carol.jpeg')">
-            <img class="featured-title" src="img/odyssey.jpg" alt="">
-            <p class="featured-desc">minwfdwqwegrethryjnfbhvfgh</p>
-            <button class="featured-button">WATCH NOW</button>
+
+        <div class="container-rl"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg')">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/GoT 1.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/Django_Unchained_logo.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/chip.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/wickman.jpeg" alt=""></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+  
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+  
         </div>
+        </div>
+          
         <div class="movie-list-container">
             <h1 class="movie-list-title">POPULAR</h1>
             <div class="movie-list-wrapper">
@@ -220,5 +239,28 @@
     </div>
     </div>
     <script src="app.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html
