@@ -128,10 +128,11 @@
   .container-rl {
     width: 70%;
     height: 100vh;
-    box-sizing: border-box;
+    /*box-sizing: border-box; */
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
   }
 
   .swiper-slide img {
